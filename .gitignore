@@ -37,3 +37,7 @@ pnpm-debug.log*
 
 # OS files
 Thumbs.db
+
+# Automation scripts
+sync_to_github.ps1
+
