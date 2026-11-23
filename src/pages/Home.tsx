@@ -9,7 +9,9 @@ import {
   GraduationCap, 
   Download,
   CheckCircle2,
-  FileCode2
+  FileCode2,
+  Server,
+  FileText
 } from 'lucide-react';
 
 interface HomeProps {
@@ -71,6 +73,69 @@ const WEEKS_DATA = [
     pdfUrl: '/records/Week6.pdf',
     icon: Layers
   },
+  {
+    id: 'week7',
+    num: '07',
+    title: 'Java Servlet Programming Lab Report',
+    summary: 'Comprehensive 7-experiment suite covering HttpServlet, GenericServlet, Servlet lifecycle methods, HTML form processing, JDBC MySQL connectivity, online ordering, and dynamic client parameter handling.',
+    tags: ['HttpServlet', 'GenericServlet', 'Lifecycle', 'Form Processing'],
+    pdfUrl: '/records/Week7.docx',
+    icon: FileText
+  },
+  {
+    id: 'week8',
+    num: '08',
+    title: 'Servlets: NetBeans & Apache Tomcat Web Deployment',
+    summary: 'Developing servlet applications in NetBeans IDE deployed on Apache Tomcat 9.0, form data handling, MySQL JDBC integration, online order calculation, and dynamic response generation.',
+    tags: ['Apache Tomcat 9.0', 'NetBeans IDE', 'HttpServlet', 'JDBC'],
+    pdfUrl: '/records/Week8.docx',
+    icon: Server
+  },
+  {
+    id: 'week9',
+    num: '09',
+    title: 'Building an Application using Maven in Spring Tool Suite (STS)',
+    summary: 'Creating a Maven-based Spring Boot project in Spring Tool Suite (STS), configuring pom.xml dependencies, implementing HelloController, and building standalone executable JAR artifacts.',
+    tags: ['Spring Tool Suite', 'Apache Maven', 'pom.xml', 'Spring Boot'],
+    pdfUrl: '/records/Week9.docx',
+    icon: Cpu
+  },
+  {
+    id: 'week10',
+    num: '10',
+    title: 'JDBC Template with In-Memory Database (H2)',
+    summary: 'Implementing Spring Boot data access using JdbcTemplate with an embedded H2 database, Author entity, @PostConstruct schema creation, and H2 browser console inspection.',
+    tags: ['JdbcTemplate', 'H2 Database', 'Spring Boot', 'H2 Console'],
+    pdfUrl: '/records/Week10.docx',
+    icon: Database
+  },
+  {
+    id: 'week11',
+    num: '11',
+    title: 'Spring JPA with In-Memory H2 Database',
+    summary: 'Spring Data JPA implementation mapping Student entities with JpaRepository, REST endpoints for adding and retrieving records as JSON, and H2 database table verification.',
+    tags: ['Spring Data JPA', 'JpaRepository', 'H2 In-Memory', 'REST API'],
+    pdfUrl: '/records/Week11.docx',
+    icon: Layers
+  },
+  {
+    id: 'week12',
+    num: '12',
+    title: 'JDBC with MySQL & Spring Boot',
+    summary: 'Connecting Spring Boot to MySQL database on port 85, configuring application.properties, initializing schema with data.sql, and retrieving employee records via /employees endpoint.',
+    tags: ['MySQL RDBMS', 'Spring Data JDBC', 'REST Controller', 'data.sql'],
+    pdfUrl: '/records/Week12.docx',
+    icon: Database
+  },
+  {
+    id: 'week13',
+    num: '13',
+    title: 'Spring JPA with Relational Database & Thymeleaf',
+    summary: 'End-to-end full-stack integration with Spring Data JPA, MySQL relational database, Thymeleaf server-side HTML rendering, and decoupled JSON REST API on port 88.',
+    tags: ['Spring Data JPA', 'MySQL Relational', 'Thymeleaf', 'REST API'],
+    pdfUrl: '/records/Week13.docx',
+    icon: Layers
+  },
 ];
 
 export default function Home({ onNavigate }: HomeProps) {
@@ -100,7 +165,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-6 border-t border-slate-100">
             <div className="bg-slate-50/80 p-3.5 rounded-xl border border-slate-200/80">
               <div className="text-xs font-medium text-slate-500">Modules Completed</div>
-              <div className="text-xl font-bold text-slate-900 mt-0.5">6 of 6 Weeks</div>
+              <div className="text-xl font-bold text-slate-900 mt-0.5">13 of 13 Weeks</div>
             </div>
             <div className="bg-slate-50/80 p-3.5 rounded-xl border border-slate-200/80">
               <div className="text-xs font-medium text-slate-500">Record Verification</div>
@@ -289,12 +354,18 @@ export default function Home({ onNavigate }: HomeProps) {
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
             {[
-              { name: 'Java JDK 21 / 26', desc: 'Core Platform' },
-              { name: 'Ubuntu Linux', desc: 'OS Environment' },
-              { name: 'MySQL Server', desc: 'RDBMS Engine' },
+              { name: 'Java JDK 17 / 21', desc: 'Core Platform' },
+              { name: 'Ubuntu & Windows', desc: 'Operating Systems' },
+              { name: 'MySQL Server', desc: 'Relational DBMS' },
               { name: 'Apache NetBeans', desc: 'Development IDE' },
-              { name: 'UCanAccess', desc: 'MS Access JDBC' },
-              { name: 'WAMP Server', desc: 'Local Web Stack' },
+              { name: 'Spring Tool Suite', desc: 'Enterprise IDE' },
+              { name: 'Apache Tomcat 9', desc: 'Servlet Container' },
+              { name: 'Apache Maven', desc: 'Build Automation' },
+              { name: 'Spring Boot', desc: 'Microservices Framework' },
+              { name: 'Spring Data JPA', desc: 'ORM & Repositories' },
+              { name: 'JdbcTemplate', desc: 'Spring JDBC' },
+              { name: 'H2 Database', desc: 'In-Memory Engine' },
+              { name: 'Thymeleaf', desc: 'HTML Template Engine' },
             ].map((tool, idx) => (
               <div key={idx} className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 text-center">
                 <div className="text-xs font-bold text-slate-900">{tool.name}</div>

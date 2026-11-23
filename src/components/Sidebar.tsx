@@ -1,4 +1,4 @@
-import { Home, Terminal, Database, Server, Cpu, FileText, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Home, Terminal, Database, Server, Cpu, FileText, CheckCircle2, ChevronRight, Layers } from 'lucide-react';
 import { clsx } from 'clsx';
 import { useEffect } from 'react';
 
@@ -72,6 +72,69 @@ const NAV_ITEMS = [
     icon: Database, 
     badge: 'CRUD'
   },
+  { 
+    id: 'week7', 
+    num: '07',
+    label: 'Week 7', 
+    title: 'Java Servlet Programming',
+    subtitle: 'HttpServlet, GenericServlet, Life-Cycle & Forms',
+    icon: FileText, 
+    badge: 'Servlets'
+  },
+  { 
+    id: 'week8', 
+    num: '08',
+    label: 'Week 8', 
+    title: 'Servlets with NetBeans & Tomcat',
+    subtitle: 'HTTP Methods, JDBC, Order App & Dynamic Response',
+    icon: Server, 
+    badge: 'Tomcat'
+  },
+  { 
+    id: 'week9', 
+    num: '09',
+    label: 'Week 9', 
+    title: 'Maven in Spring Tool Suite (STS)',
+    subtitle: 'Spring Boot Setup, pom.xml & JAR Build',
+    icon: Cpu, 
+    badge: 'Maven'
+  },
+  { 
+    id: 'week10', 
+    num: '10',
+    label: 'Week 10', 
+    title: 'JdbcTemplate with H2 Database',
+    subtitle: 'Author Entity, Service, @PostConstruct & H2 Console',
+    icon: Database, 
+    badge: 'H2 DB'
+  },
+  { 
+    id: 'week11', 
+    num: '11',
+    label: 'Week 11', 
+    title: 'Spring JPA with H2 Database',
+    subtitle: 'Student Entity, JpaRepository, REST API & Console',
+    icon: Layers, 
+    badge: 'JPA'
+  },
+  { 
+    id: 'week12', 
+    num: '12',
+    label: 'Week 12', 
+    title: 'JDBC with MySQL & Spring Boot',
+    subtitle: 'Employee Entity, MySQL Datasource & REST Endpoint',
+    icon: Database, 
+    badge: 'MySQL'
+  },
+  { 
+    id: 'week13', 
+    num: '13',
+    label: 'Week 13', 
+    title: 'Spring JPA & Relational DB',
+    subtitle: 'Employee Entity, MySQL, Thymeleaf HTML & REST API',
+    icon: Layers, 
+    badge: 'Relational'
+  },
 ];
 
 export default function Sidebar({ activePage, onNavigate, open, onClose }: SidebarProps) {
@@ -110,7 +173,7 @@ export default function Sidebar({ activePage, onNavigate, open, onClose }: Sideb
             </span>
             <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
               <CheckCircle2 size={11} className="text-emerald-600" />
-              6 / 6 Completed
+              13 / 13 Completed
             </span>
           </div>
         </div>

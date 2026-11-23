@@ -8,6 +8,13 @@ import Week3 from './pages/Week3';
 import Week4 from './pages/Week4';
 import Week5 from './pages/Week5';
 import Week6 from './pages/Week6';
+import Week7 from './pages/Week7';
+import Week8 from './pages/Week8';
+import Week9 from './pages/Week9';
+import Week10 from './pages/Week10';
+import Week11 from './pages/Week11';
+import Week12 from './pages/Week12';
+import Week13 from './pages/Week13';
 
 const PAGES: Record<string, FC<{ onNavigate?: (page: string) => void }>> = {
   home: Home as FC<{ onNavigate?: (page: string) => void }>,
@@ -17,6 +24,13 @@ const PAGES: Record<string, FC<{ onNavigate?: (page: string) => void }>> = {
   week4: Week4,
   week5: Week5,
   week6: Week6,
+  week7: Week7,
+  week8: Week8,
+  week9: Week9,
+  week10: Week10,
+  week11: Week11,
+  week12: Week12,
+  week13: Week13,
 };
 
 export default function App() {

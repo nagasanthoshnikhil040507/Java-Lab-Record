@@ -70,9 +70,9 @@ export default function WeekLayout({
                   className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-bold rounded-xl transition-all shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 group"
                 >
                   <Download size={17} className="transition-transform group-hover:-translate-y-0.5" />
-                  <span>Download PDF Record</span>
+                  <span>{pdfUrl.toLowerCase().endsWith('.docx') ? 'Download Lab Record' : 'Download PDF Record'}</span>
                   <span className="text-[11px] font-mono px-1.5 py-0.5 bg-emerald-900/40 rounded text-emerald-100 font-normal">
-                    PDF
+                    {pdfUrl.toLowerCase().endsWith('.docx') ? 'DOCX' : 'PDF'}
                   </span>
                 </a>
               </div>

@@ -1,5 +1,5 @@
 import { Menu, X, BookOpen, GraduationCap, Award, ShieldCheck } from 'lucide-react';
-import { useState } from 'react';
+
 
 interface HeaderProps {
   sidebarOpen: boolean;
@@ -7,7 +7,6 @@ interface HeaderProps {
 }
 
 export default function Header({ sidebarOpen, onToggleSidebar }: HeaderProps) {
-  const [imgError, setImgError] = useState(false);
 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs flex-shrink-0 transition-all">
@@ -25,23 +24,11 @@ export default function Header({ sidebarOpen, onToggleSidebar }: HeaderProps) {
               {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
 
-            {/* Profile Avatar with subtle luxury ring */}
+            {/* Lab Record Logo Icon */}
             <div className="relative flex-shrink-0 group">
-              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden ring-2 ring-emerald-600/30 p-0.5 bg-gradient-to-br from-emerald-50 to-slate-100 shadow-sm flex items-center justify-center">
-                {!imgError ? (
-                  <img
-                    src="/profile.jpg"
-                    alt="G Naga Santhosh Nikhil"
-                    className="w-full h-full object-cover object-top rounded-full transition-transform duration-300 group-hover:scale-105"
-                    onError={() => setImgError(true)}
-                  />
-                ) : (
-                  <div className="w-full h-full bg-slate-900 text-emerald-400 font-bold rounded-full flex items-center justify-center text-sm tracking-wider">
-                    SN
-                  </div>
-                )}
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden ring-2 ring-emerald-600/30 bg-gradient-to-br from-emerald-600 to-emerald-800 shadow-sm flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                <BookOpen size={22} className="text-white" />
               </div>
-              <span className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full shadow-xs" title="Official Student Record" />
             </div>
 
             {/* Student metadata */}
@@ -72,7 +59,7 @@ export default function Header({ sidebarOpen, onToggleSidebar }: HeaderProps) {
             </div>
             <h1 className="text-xs sm:text-sm font-bold text-slate-900 tracking-tight mt-0.5 flex items-center gap-1.5">
               <BookOpen size={14} className="text-slate-400 hidden sm:inline" />
-              Advanced Java Programming <span className="font-normal text-slate-500 hidden md:inline">Lab Record</span>
+              ADJ Lab Record
             </h1>
             <div className="text-[11px] text-slate-400 font-medium hidden sm:block">
               Academic Year 2025–2026

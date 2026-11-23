@@ -13,6 +13,7 @@ export default function Week6({ onNavigate }: { onNavigate?: (page: string) => v
       pdfUrl="/records/Week6.pdf"
       onNavigate={onNavigate}
       prevWeek="week5"
+      nextWeek="week7"
     >
       <Section title="Aim" badge="Objective">
         <p className="text-slate-700 leading-relaxed font-medium">
